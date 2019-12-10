@@ -1,13 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matrixfiller
 
-x, y = np.meshgrid(np.linspace(0,255,255), np.linspace(0,255,255))
-z = x * y
+z = [[3, 3, 15], [1, 2, 171], [2, 1, 90], [-2, 2, 255]]
 
-for i in range(0, 255):
-    z[155][i] = 0
+z = matrixfiller.matrix_from_array(z, 50, 50)
 
 # Plot the grid
 plt.imshow(z)
-plt.gray()
+# plt.gray()
 plt.show()
