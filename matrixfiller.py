@@ -30,7 +30,6 @@ def matrix_from_array(v, n, m):
 
     triangulation = Delaunay(points)
 
-    print(triangulation.simplices)
     for point_indices in triangulation.simplices:
         indices_in_matrix = []
         for indice in point_indices:
